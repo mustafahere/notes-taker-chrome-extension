@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Note Taker Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Chrome extension built with React, TypeScript, and Vite. It allows users to take notes specific to each site and highlights those notes directly on the website.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Save notes specific to each website.
+- Automatically highlight saved notes when you revisit the site.
+- Built with React, TypeScript, and Vite for a modern development experience.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Node.js](https://nodejs.org/) (v18 or higher)
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the repository:**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/your-username/notes-taker-chrome-extension.git
+   cd notes-taker-chrome-extension
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Build extention:**
+   ```bash
+   npm run build
+   ```
+4. **Load the Extension in Chrome:**
+   - Open Chrome and go to chrome://extensions/.
+   - Enable "Developer mode" by toggling the switch in the top right corner.
+   - Click "Load unpacked" and select the dist folder from your project directory.
+   - The extension should now be loaded and visible in the Chrome toolbar.
